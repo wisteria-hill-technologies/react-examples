@@ -1,5 +1,6 @@
 import {FC, useRef, useEffect, memo, useContext} from 'react';
 import {UserContext} from '../../UserContext';
+import Input from './Input';
 
 interface Props {
   count: number;
@@ -17,7 +18,7 @@ const InputContainer: FC<Props> = ({ count, handleIncrement }) => {
     <div>
       <h2>Input with Ref</h2>
       <p>Username: { user?.username }</p>
-      <input
+      <Input
         ref={inputRef}
       />
       <h2>Passed Count: { count }</h2>
